@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wyk.generator.mapper.CaptureDeviceInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.wyk.generator.domain.CaptureDeviceInfo" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="capture_id" property="captureId" jdbcType="VARCHAR" />
+    <result column="capture_name" property="captureName" jdbcType="VARCHAR" />
+    <result column="capture_mac" property="captureMac" jdbcType="VARCHAR" />
+    <result column="capture_uuid" property="captureUuid" jdbcType="VARCHAR" />
+    <result column="type" property="type" jdbcType="INTEGER" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="ip" property="ip" jdbcType="VARCHAR" />
+    <result column="floor" property="floor" jdbcType="INTEGER" />
+  </resultMap>
+</mapper>
