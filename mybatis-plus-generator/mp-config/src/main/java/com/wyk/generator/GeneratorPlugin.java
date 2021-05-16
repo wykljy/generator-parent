@@ -22,7 +22,6 @@ public class GeneratorPlugin {
      * RUN THIS
      */
     public static void main(String[] args) {
-
         // 代码生成器
         AutoGenerator mpg = new AutoGenerator();
         // 全局配置
