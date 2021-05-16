@@ -40,13 +40,14 @@ public class GeneratorPlugin {
         gc.setMapperName("%sMapper");
         //gc.setXmlName("%sMapper");
         gc.setFileOverride(true);
-        gc.setActiveRecord(true);
+        gc.setSwagger2(true);
+        //gc.setActiveRecord(true);
         // XML 二级缓存
-        gc.setEnableCache(false);
+        //gc.setEnableCache(false);
         // XML ResultMap
         gc.setBaseResultMap(true);
         // XML columList
-        gc.setBaseColumnList(false);
+        //gc.setBaseColumnList(false);
         mpg.setGlobalConfig(gc);
 
         // TODO 数据源配置
@@ -86,7 +87,8 @@ public class GeneratorPlugin {
         });
         cfg.setFileOutConfigList(focList);
         mpg.setCfg(cfg);
-        //mpg.setTemplate(new TemplateConfig().setXml(null));
+        //取消默认mapper 生成地址
+        mpg.setTemplate(new TemplateConfig().setXml(null));
 
         // 策略配置
         StrategyConfig strategy = new StrategyConfig();

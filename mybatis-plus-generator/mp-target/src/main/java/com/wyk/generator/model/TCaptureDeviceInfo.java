@@ -1,8 +1,9 @@
 package com.wyk.generator.model;
 
-import com.baomidou.mybatisplus.extension.activerecord.Model;
 import java.time.LocalDateTime;
 import java.io.Serializable;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -16,64 +17,40 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-public class TCaptureDeviceInfo extends Model<TCaptureDeviceInfo> {
+@ApiModel(value="TCaptureDeviceInfo对象", description="")
+public class TCaptureDeviceInfo implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * 设备ID
-     */
+    @ApiModelProperty(value = "设备ID")
     private String captureId;
 
-    /**
-     * 设备名称
-     */
+    @ApiModelProperty(value = "设备名称")
     private String captureName;
 
-    /**
-     * 设备mac
-     */
+    @ApiModelProperty(value = "设备mac")
     private String captureMac;
 
-    /**
-     * 设备UUID
-     */
+    @ApiModelProperty(value = "设备UUID")
     private String captureUuid;
 
-    /**
-     * 1.人脸摄像机 2.人脸闸机
-     */
+    @ApiModelProperty(value = "1.人脸摄像机 2.人脸闸机")
     private Integer type;
 
-    /**
-     * 安装地址
-     */
+    @ApiModelProperty(value = "安装地址")
     private String address;
 
-    /**
-     * 创建时间
-     */
+    @ApiModelProperty(value = "创建时间")
     private LocalDateTime createTime;
 
-    /**
-     * 更新时间
-     */
+    @ApiModelProperty(value = "更新时间")
     private LocalDateTime updateTime;
 
-    /**
-     * 设备IP
-     */
+    @ApiModelProperty(value = "设备IP")
     private String ip;
 
-    /**
-     * 设备所属楼层
-     */
+    @ApiModelProperty(value = "设备所属楼层")
     private Integer floor;
 
-
-    @Override
-    protected Serializable pkVal() {
-        return this.captureId;
-    }
 
 }
